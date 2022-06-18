@@ -1,0 +1,5 @@
+email-campaigner:
+  version: 1.x
+  css:
+    base:
+      css/email-campaigner.css: {}

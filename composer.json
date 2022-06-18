@@ -1,0 +1,17 @@
+{
+    "name": "drupal/sublimiter",
+    "autoload": {
+        "psr-4": {
+            "Drupal\\Sublimiter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "'Arnab",
+            "email": "abiswas@cozeva.com"
+        }
+    ],
+    "require": {
+        "league/csv": "^9.8"
+    }
+}

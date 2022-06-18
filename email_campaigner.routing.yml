@@ -1,0 +1,145 @@
+
+email.campaign.home:
+  path: '/config/campaign/email/home'
+  defaults:
+    _title: 'Email Campaign Home'
+    _controller: '\Drupal\email_campaigner\Controller\CampaignHome::CampaignHome'
+  requirements:
+    _custom_access:  '\Drupal\email_campaigner\Controller\CampaignHome::access'
+  options:
+    no_cache: 'TRUE'
+
+email.campaign.list:
+  path: '/config/campaign/email/list'
+  defaults:
+    _title: 'List all Email Campaign'
+    _form: '\Drupal\email_campaigner\Form\EmailCampaignList'
+  requirements:
+    _custom_access:  '\Drupal\email_campaigner\Controller\CampaignHome::access'
+  options:
+    no_cache: 'TRUE'
+
+email.campaign.create:
+  path: '/config/campaign/email/new'
+  defaults:
+    _title: 'Create New Email Campaign'
+    _form: '\Drupal\email_campaigner\Form\EmailCampaignCreate'
+  requirements:
+    _custom_access:  '\Drupal\email_campaigner\Controller\CampaignHome::access'
+
+email.campaign.edit:
+  path: '/config/campaign/email/edit/{campaign_id}'
+  defaults:
+    _title: 'Edit Exisitng Email Campaign'
+    _form: '\Drupal\email_campaigner\Form\EmailCampaignCreate'
+  requirements:
+    _custom_access:  '\Drupal\email_campaigner\Controller\CampaignHome::access'
+
+email.campaign.variables.add:
+  path: '/config/campaign/email/{campaign_id}/variables'
+  defaults:
+    _title: 'Add/Edit Email Campaign Variables'
+    _form: '\Drupal\email_campaigner\Form\EmailCampaignAddEditVariables'
+  requirements:
+    _custom_access:  '\Drupal\email_campaigner\Controller\CampaignHome::access'
+
+email.campaign.variables.template.line:
+  path: '/config/campaign/email/{campaign_id}/template/line'
+  defaults:
+    _title: 'Add/Edit Email Campaign Lines'
+    _form: '\Drupal\email_campaigner\Form\EmailCampaignAddEditLines'
+  requirements:
+    _custom_access:  '\Drupal\email_campaigner\Controller\CampaignHome::access'
+
+email.campaign.content.preview:
+  path: '/config/campaign/email/campaign/{campaign_id}/preview'
+  defaults:
+    _title: 'Email Campaign Email Preview'
+    _controller: '\Drupal\email_campaigner\Controller\CampaignCron::CampaignContentPreview'
+  requirements:
+    _custom_access:  '\Drupal\email_campaigner\Controller\CampaignHome::access'
+
+email.campaign.upload.lead:
+  path: '/config/campaign/email/lead/upload'
+  defaults:
+    _title: 'Upload Lead File'
+    _form: '\Drupal\email_campaigner\Form\EmailCampaignUploadLeadFile'
+  requirements:
+    _custom_access:  '\Drupal\email_campaigner\Controller\CampaignHome::access'
+
+email.campaign.load.lead:
+  path: '/config/campaign/email/lead/load/{fid}'
+  defaults:
+    _title: 'Load Lead for Campaign'
+    _form: '\Drupal\email_campaigner\Form\EmailCampaignLoadLead'
+  requirements:
+    _custom_access:  '\Drupal\email_campaigner\Controller\CampaignHome::access'
+
+email.campaign.acccount.add:
+  path: '/config/campaign/email/account/add'
+  defaults:
+    _title: 'Add New Email Account'
+    _form: '\Drupal\email_campaigner\Form\EmailAccountAdd'
+  requirements:
+    _custom_access:  '\Drupal\email_campaigner\Controller\CampaignHome::access'
+
+email.campaign.acccount.list:
+  path: '/config/campaign/email/account/list2'
+  defaults:
+    _title: 'List of Email Accounts'
+    _form: '\Drupal\email_campaigner\Form\EmailAccountList'
+  requirements:
+    _custom_access:  '\Drupal\email_campaigner\Controller\CampaignHome::access'
+
+email.campaign.test.acccount:
+  path: '/config/campaign/email/account/test'
+  defaults:
+    _title: 'Email Account Tester'
+    _form: '\Drupal\email_campaigner\Form\EmailAccountTester'
+  requirements:
+    _custom_access:  '\Drupal\email_campaigner\Controller\CampaignHome::access'
+
+email.tracking.image:
+  path: '/pixie/{image}'
+  defaults:
+    _title: 'Image Pixie  (API)'
+    _controller: '\Drupal\email_campaigner\Controller\CampaignHome::imagePixie'
+  requirements:
+    _custom_access:  '\Drupal\email_campaigner\Controller\CampaignHome::accessTrue'
+  options:
+    no_cache: 'TRUE'
+
+email.campaign.cron:
+  path: '/config/campaign/email/cron'
+  defaults:
+    _title: 'Email Campaign Cron (API)'
+    _controller: '\Drupal\email_campaigner\Controller\CampaignCron::CampaignEmailAPICron'
+  requirements:
+    _custom_access:  '\Drupal\email_campaigner\Controller\CampaignHome::accessTrue'
+
+paypal.campaign.cron:
+  path: '/config/campaign/paypal/cron'
+  defaults:
+    _title: 'Email Campaign Cron (API)'
+    _controller: '\Drupal\email_campaigner\Controller\CampaignCron::CampaignPaypalAPICron'
+  requirements:
+    _custom_access:  '\Drupal\email_campaigner\Controller\CampaignHome::accessTrue'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

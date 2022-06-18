@@ -1,0 +1,5 @@
+name: Email Campaigner
+description: Create Automated Email Campaign
+
+type: module
+core_version_requirement: 9.x
